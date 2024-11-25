@@ -3,15 +3,19 @@
 
 obj-m := hello.o
 
-VER := v5.10
+#VER := v5.10
+#ARCH := arm
 ARCH := arm64
-BOARD := pi4
-BDO := def
+#BOARD := pi3
+#BOARD := pi4
+#BDO := def
 
+#ARCC := arm-linux-gnueabihf-
 ARCC := aarch64-linux-gnu-
 
-BDIR := build-$(VER)-$(ARCH)-$(BOARD)-$(BDO)
-KDIR := /home/raspi/Projects/kernel/build/$(BDIR)
+#BDIR := build-$(VER)-$(ARCH)-$(BOARD)-$(BDO)
+#KDIR := /home/raspi/Projects/kernel/build/$(BDIR)
+KDIR := /home/kernel-study/kernel/linux
 
 MRUN := $(MAKE) ARCH=$(ARCH) CROSS_COMPILE=$(ARCC)
 
